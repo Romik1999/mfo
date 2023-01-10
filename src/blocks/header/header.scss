@@ -5,20 +5,88 @@
   box-sizing: border-box;
   z-index: 20;
   padding: 12px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   @media screen and (max-width: 768px) {
-    padding: 0 15px;
+    padding: 15px;
   }
 
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    column-gap: 20px;
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+    }
   }
 
-  &__title{
+  &__logo {
+    display: flex;
+
+    @media screen and (max-width: 1440px) {
+      max-width: 200px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      max-width: 150px;
+    }
+
+    @media screen and (max-width: 768px) {
+      max-width: 120px;
+    }
+
+    @media screen and (max-width: 575px) {
+      max-width: 220px;
+      margin-bottom: 20px;
+    }
+
+    & img,
+    & svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
     font-size: 28px;
-    line-height: 34px;
+    line-height: 120%;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__time {
+    font-size: 28px;
+    line-height: 120%;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }

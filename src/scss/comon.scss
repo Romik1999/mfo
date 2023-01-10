@@ -4,7 +4,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
+  font-family: Lato, sans-serif;
   font-size: 20px;
   line-height: 120%;
   font-weight: 400;
@@ -35,4 +35,8 @@ main {
   max-width: 1640px;
   width: 100%;
   margin: 0 auto;
+
+  @media screen and (max-width: 1440px) {
+    max-width: 1200px;
+  }
 }
