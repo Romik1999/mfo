@@ -1,0 +1,17 @@
+@import "src/scss/colors.scss";
+
+.sbtn {
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  height: 40px;
+}
