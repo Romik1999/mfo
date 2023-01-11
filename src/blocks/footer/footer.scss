@@ -1,5 +1,102 @@
 @import "src/scss/colors.scss";
 
 .footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
 
+  background-color: #F5F5F5;
+
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    display: flex;
+
+    @media screen and (max-width: 1440px) {
+      max-width: 200px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      max-width: 150px;
+    }
+
+    @media screen and (max-width: 768px) {
+      max-width: 120px;
+    }
+
+    @media screen and (max-width: 575px) {
+      max-width: 220px;
+      margin-bottom: 20px;
+    }
+
+    & img,
+    & svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 120%;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__time {
+    font-size: 28px;
+    line-height: 120%;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__bottom{
+    text-align: center;
+    margin-top: 40px;
+
+    font-size: 20px;
+    line-height: 120%;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 16px;
+    }
+  }
 }
