@@ -38,12 +38,8 @@
 
   &-item {
     display: flex;
-    align-items: center;
     column-gap: 20px;
-
-    @media screen and (max-width: 1001px) {
-      align-items: flex-start;
-    }
+    align-items: flex-start;
 
     @media screen and (max-width: 768px) {
       column-gap: 10px;
