@@ -8,26 +8,48 @@
   background-color: #F5F5F5;
 
   @media screen and (max-width: 768px) {
-    padding: 15px;
+    padding-top: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 24px;
   }
 
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 322px 1fr 322px;
+    grid-template-rows: auto;
     column-gap: 20px;
+    align-items: center;
+
+    @media screen and (max-width: 1440px) {
+      grid-template-columns: 240px 1fr 240px;
+      grid-template-rows: auto;
+    }
+
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: 200px 1fr 200px;
+      grid-template-rows: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 180px 1fr 180px;
+      grid-template-rows: auto;
+    }
 
     @media screen and (max-width: 575px) {
+      display: flex;
       flex-direction: column;
+      row-gap: 15px;
     }
   }
 
   &__logo {
     display: flex;
+    max-width: 276px;
+    width: 100%;
 
     @media screen and (max-width: 1440px) {
       max-width: 200px;
-      width: 100%;
     }
 
     @media screen and (max-width: 1000px) {
@@ -40,7 +62,6 @@
 
     @media screen and (max-width: 575px) {
       max-width: 220px;
-      margin-bottom: 20px;
     }
 
     & img,
@@ -53,6 +74,7 @@
   &__title {
     font-size: 28px;
     line-height: 120%;
+    text-align: center;
 
     @media screen and (max-width: 1440px) {
       font-size: 20px;
@@ -68,12 +90,14 @@
 
     @media screen and (max-width: 575px) {
       margin-bottom: 5px;
+      font-size: 18px;
     }
   }
 
   &__time {
     font-size: 28px;
     line-height: 120%;
+    text-align: right;
 
     @media screen and (max-width: 1440px) {
       font-size: 20px;
@@ -86,9 +110,14 @@
     @media screen and (max-width: 768px) {
       font-size: 14px;
     }
+
+    @media screen and (max-width: 575px) {
+      font-size: 18px;
+    }
   }
 
-  &__bottom{
+  &__info {
+    grid-column: span 3;
     text-align: center;
     margin-top: 40px;
 
@@ -96,6 +125,11 @@
     line-height: 120%;
 
     @media screen and (max-width: 1000px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin-top: 0;
       font-size: 16px;
     }
   }
