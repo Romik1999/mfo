@@ -1,6 +1,3 @@
-<p align="center">
-    <h1 align="center">Trusted Doctor</h1>
-</p>
 
 DIRECTORY MAIN STRUCTURE
 -------------------
