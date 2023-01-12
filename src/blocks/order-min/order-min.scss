@@ -1,16 +1,13 @@
 @import "src/scss/colors.scss";
 
-.order-max {
+.order-min {
   overflow: visible;
-  padding-top: 130px;
-  padding-bottom: 60px;
+  padding-top: 100px;
+  padding-bottom: 200px;
 
   @media screen and (max-width: 1000px) {
     padding-top: 60px;
-  }
-
-  @media screen and (max-width: 769px) {
-    padding: 30px 15px;
+    padding-bottom: 120px;
   }
 
   &__wrapper {
@@ -20,10 +17,7 @@
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 
-    padding-top: 40px;
-    padding-left: 138px;
-    padding-right: 118px;
-    padding-bottom: 40px;
+    padding: 40px 118px;
     box-sizing: border-box;
 
     @media screen and (max-width: 1440px) {
@@ -55,12 +49,12 @@
     display: flex;
     z-index: 1;
 
-    max-width: 713px;
+    max-width: 415px;
     width: 100%;
 
     @media screen and (max-width: 1440px) {
       right: 40px;
-      width: 50%;
+      width: 30%;
     }
 
     @media screen and (max-width: 1000px) {
@@ -93,13 +87,18 @@
   }
 
   &__info {
-    max-width: 555px;
     width: 100%;
     position: relative;
     z-index: 2;
+    padding-right: 415px;
+    box-sizing: border-box;
 
     @media screen and (max-width: 1440px) {
-      width: 50%;
+      padding-right: 35%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      padding-right: 0;
     }
 
     @media screen and (max-width: 769px) {
@@ -112,7 +111,6 @@
     font-weight: 900;
     font-size: 45px;
     line-height: 120%;
-    color: $red;
     margin-bottom: 10px;
 
     @media screen and (max-width: 1440px) {
@@ -125,24 +123,6 @@
 
     @media screen and (max-width: 575px) {
       font-size: 26px;
-    }
-  }
-
-  &__subtitle {
-    font-size: 32px;
-    line-height: 120%;
-    margin-bottom: 30px;
-
-    @media screen and (max-width: 1440px) {
-      font-size: 22px;
-    }
-
-    @media screen and (max-width: 769px) {
-      text-align: center;
-    }
-
-    @media screen and (max-width: 575px) {
-      font-size: 20px;
     }
   }
 

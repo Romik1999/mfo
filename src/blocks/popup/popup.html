@@ -1,0 +1,65 @@
+<div class="popup" id="popup_order">
+    <div class="popup__close">
+        Закрыть
+    </div>
+    <div class="popup__wrapper">
+        <div class="popup__title">
+            Оставьте заявку
+        </div>
+        <div class="popup__subtitle">
+            Для получения заявок, оставьте номер телефона и ваше имя.
+            Наш менеджер расскажет вам все подробнее.
+        </div>
+        <div class="popup__form">
+            <form class="calc-form">
+                <input class="calc-form__field" type="text" placeholder="Как вас зовут?">
+                <input class="calc-form__field" type="tel" placeholder="Ваш телефон" onkeypress="maskPhone(event)"
+                       onpaste="onPastePhone(event)">
+                <button class="calc-form__button" type="submit">Получить деньги</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup" id="popup_review">
+    <div class="popup__close">
+        Закрыть
+    </div>
+    <div class="popup__wrapper">
+        <div class="popup__title">
+            Оставьте отзыв
+        </div>
+        <div class="popup__form">
+            <form class="calc-form">
+                <div class="calc-form__inner">
+                    <div class="calc-form__left">
+                        <input class="calc-form__foto" type="file" placeholder="Ваше фото">
+                        <p>Добавить фото</p>
+                    </div>
+                    <div class="calc-form__right">
+                        <input class="calc-form__field" type="text" placeholder="Как вас зовут?">
+                        <textarea class="calc-form__textarea" name="message" placeholder="Ваш комментарий"></textarea>
+                    </div>
+                </div>
+                <button class="calc-form__button" type="submit">Оставить отзыв</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup" id="popup_success">
+    <div class="popup__close">
+        Закрыть
+    </div>
+    <div class="popup__wrapper">
+        <div class="popup__title">
+            Заявка отправлена
+        </div>
+        <div class="popup__subtitle">
+            Мы получили вашу заявку.
+            Наш менеджер свяжится с вами.
+        </div>
+    </div>
+</div>

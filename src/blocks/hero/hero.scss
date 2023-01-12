@@ -148,7 +148,7 @@
         flex-direction: column;
       }
 
-      &:not(:last-child){
+      &:not(:last-child) {
         @media screen and (max-width: 575px) {
           margin-bottom: 25px;
         }
@@ -320,7 +320,7 @@
     padding: 11px 20px;
 
     @media screen and (max-width: 1440px) {
-      height: 42px;
+      height: 55px;
       border-radius: 15px;
       font-size: 20px;
     }
@@ -381,7 +381,7 @@
     padding: 5px 20px;
 
     @media screen and (max-width: 1440px) {
-      height: 42px;
+      height: 55px;
       border-radius: 15px;
       font-size: 18px;
     }
@@ -409,5 +409,93 @@
     font-size: 12px;
     line-height: 14px;
     color: #000000;
+  }
+
+  &__textarea{
+    background: $white;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0px 50px 50px -40px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    height: 200px;
+    width: 100%;
+    resize: none;
+
+
+    font-size: 32px;
+    line-height: 120%;
+    color: #000000;
+    padding: 20px;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      height: 180px;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 16px;
+    }
+
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 120%;
+      color: #000000;
+      opacity: 0.5;
+
+      @media screen and (max-width: 1440px) {
+        font-size: 16px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 575px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.rangeslider {
+  height: 3px;
+  background-color: $red;
+  border-radius: 0;
+  box-shadow: none;
+
+  &__fill {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: $white;
+  }
+
+  &__handle {
+    width: 82px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 20px;
+    border: none;
+    box-shadow: none;
+    background-image: url("../img/handle-img.png");
+    background-size: 18px 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 575px) {
+      width: 48px;
+      height: 32px;
+    }
+  }
+
+  &--horizontal .rangeslider__handle{
+    top: calc(50% - 10px);
+
+    @media screen and (max-width: 575px) {
+      top: calc(50% - 16px);
+    }
   }
 }

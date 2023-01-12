@@ -1,0 +1,165 @@
+@import "src/scss/colors.scss";
+
+.popup {
+  position: relative;
+  max-width: 663px;
+  width: 100%;
+  background: $yellowGradient;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 42px;
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  &#popup_review {
+    max-width: 820px;
+
+    & .popup__title {
+      margin-bottom: 35px;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 25px;
+      }
+    }
+
+    & .popup__form {
+      max-width: 680px;
+    }
+
+    & .popup__wrapper {
+      min-height: 640px;
+    }
+
+    & .calc-form {
+      &__inner {
+        display: flex;
+        column-gap: 20px;
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+      }
+
+      &__left {
+
+        @media screen and (max-width: 768px) {
+          margin-bottom: 25px;
+        }
+
+        & p {
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+          margin: 0;
+          margin-top: 10px;
+        }
+      }
+
+      &__foto {
+        width: 160px;
+        height: 160px;
+        display: block;
+        background-color: $white;
+        border-radius: 20px;
+
+        @media screen and (max-width: 768px) {
+          margin: 0 auto;
+        }
+      }
+
+      & .calc-form__textarea,
+      & .calc-form__field {
+        font-size: 20px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+
+      & .calc-form__button {
+        margin-top: 25px;
+
+        @media screen and (max-width: 768px) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+
+    @media screen and (max-width: 768px) {
+      min-height: 500px;
+    }
+
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 120%;
+    color: $red;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__close {
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: $red;
+
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__form {
+    max-width: 380px;
+    width: 100%;
+
+    & .calc-form__field {
+      margin-bottom: 15px;
+      background: #FFFFFF;
+      box-shadow: 0px 50px 50px -40px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      border: none;
+      padding: 18px 20px;
+    }
+  }
+
+  & .carousel__button {
+    opacity: 0 !important;
+  }
+}
