@@ -56,6 +56,18 @@
         font-size: 18px;
         margin-bottom: 5px;
       }
+
+      @media screen and (max-width: 575px) {
+        font-size: 20px;
+      }
+
+      &--red {
+        color: $red;
+      }
+
+      &--yelow {
+        color: $yellow;
+      }
     }
 
     &__image {
@@ -64,6 +76,11 @@
       height: 125px;
       margin: 0 auto;
       margin-bottom: 20px;
+
+      @media screen and (max-width: 575px) {
+        width: 135px;
+        height: 135px;
+      }
 
       & img {
         width: 100%;
