@@ -37,13 +37,18 @@
                 </div>
                 <div class="hero-calc__form">
                     <form class="calc-form">
-                        <div class="calc-form__slider">
-                            <input type="range" value="10000" name="amount" min="1000" max="100000" step="1000">
+                        <div class="calc-form__range">
+                            <div class="range">
+                                <span class="range__fill">
+                                    <span class="range__handler"></span>
+                                </span>
+                                <input class="range__input" type="range" name="amount" min="1000" max="100000" value="10000" step="1000">
+                            </div>
                         </div>
                         <div class="calc-form__bottom">
                             <div class="calc-form__field">
                                 <input class="calc-form__input amount-show" type="tel" placeholder="Введите сумму"
-                                       value="10000" id="only_num">
+                                       value="10000">
                             </div>
                             <div class="calc-form__field">
                                 <input class="calc-form__input" type="tel" placeholder="Ваш телефон"
