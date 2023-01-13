@@ -51,12 +51,11 @@
       margin-bottom: 10px;
       text-align: center;
 
-      @media screen and (max-width: 768px) {
-        font-size: 18px;
-        margin-bottom: 5px;
+      @media screen and (max-width: 1440px) {
+        font-size: 26px;
       }
 
-      @media screen and (max-width: 575px) {
+      @media screen and (max-width: 769px) {
         font-size: 20px;
       }
 
@@ -76,7 +75,7 @@
       margin: 0 auto;
       margin-bottom: 20px;
 
-      @media screen and (max-width: 575px) {
+      @media screen and (max-width: 769px) {
         width: 135px;
         height: 135px;
       }
