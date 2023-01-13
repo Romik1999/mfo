@@ -76,6 +76,9 @@
       line-height: 120%;
       margin-bottom: 10px;
 
+      @media screen and (max-width: 1440px) {
+        font-size: 20px;
+      }
       @media screen and (max-width: 768px) {
         font-size: 18px;
         margin-bottom: 5px;
@@ -85,6 +88,10 @@
     &__text {
       font-size: 20px;
       line-height: 120%;
+
+      @media screen and (max-width: 1440px) {
+        font-size: 18px;
+      }
 
       @media screen and (max-width: 768px) {
         font-size: 16px;
