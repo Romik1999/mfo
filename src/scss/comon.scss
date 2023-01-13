@@ -83,3 +83,13 @@ main {
     }
   }
 }
+
+.color {
+  &--yellow {
+    color: $yellow;
+  }
+
+  &--red {
+    color: $red;
+  }
+}
