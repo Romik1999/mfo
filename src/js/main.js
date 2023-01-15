@@ -24,28 +24,72 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    const rangeInput = document.querySelector(".range__input"),
-        rangeTrack = document.querySelector(".range__fill"),
-        resultInput = document.querySelector(".amount-show");
 
-    resultInput.value = resultInput.value.replace(/[^0-9]/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' Р'
+    // range
+    const sumInput = document.querySelector('.form__input--range'),
+        rangeInputSum = document.querySelector('.range__input'),
+        rangeTrackSum = document.querySelector('.range__fill'),
+        rangeTrackHandler = document.querySelector('.range__handler');
 
-    const calc = () => {
-        let val = +rangeInput.value,
-            min = +rangeInput.getAttribute('min'),
-            max = +rangeInput.getAttribute('max'),
-            step = +rangeInput.getAttribute('step'),
-            position = 100 / (max - step) * (val - step);
+    sumInput.value = sumInput.value.replace(/[^0-9]/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' Р'
 
-        rangeTrack.style.width = `${position}%`;
-        resultInput.value = rangeInput.value.replace(/[^0-9]/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' Р';
+    // маска
+    function prettify(num) {
+        const n = num.toString();
+        return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ') + ' Р';
     }
 
-    rangeInput.addEventListener('input', function () {
-        calc();
-    });
+    function range(input$, progress$, content) {
+        if (input$) {
+            const val = input$.value;
+            const min = input$.getAttribute('min');
+            const max = input$.getAttribute('max');
+            const step = input$.getAttribute('step');
+            const position = 100 / (max - step) * (val - step);
+            updateRangePosition(progress$, position);
 
-    calc();
+            input$.addEventListener('input', () => {
+                const val = input$.value;
+                const min = input$.getAttribute('min');
+                const max = input$.getAttribute('max');
+                const step = input$.getAttribute('step');
+                const position = 100 / (max - step) * (val - step);
+                updateRangePosition(progress$, position);
+                content.value = prettify(val);
+            });
+        }
+    }
+
+    function updateRangePosition(progress$, position) {
+        if (progress$) {
+            progress$.style.width = `${position}%`;
+        }
+    }
+
+    range(rangeInputSum, rangeTrackSum, sumInput);
+
+
+    sumInput.addEventListener('input', function () {
+
+        const minSum = rangeInputSum.getAttribute('min');
+        const maxSum = rangeInputSum.getAttribute('max');
+        const stepSum = rangeInputSum.getAttribute('step');
+
+        this.value = prettify(this.value.replace(/\D/g, ''))
+        if (+this.value.replace(/\D/g, '') > +maxSum) {
+            this.value = prettify(maxSum)
+            return
+        }
+        if (+this.value.replace(/\D/g, '') < +minSum) {
+            rangeInputSum.value = 0
+            rangeTrackSum.style.width = 0 + '%'
+            return
+        }
+        if (+this.value.replace(/\D/g, '') >= +minSum && +this.value.replace(/\D/g, '') <= +maxSum) {
+            rangeTrackSum.style.width = `${100 / (maxSum - stepSum) * (this.value.replace(/\D/g, '') - stepSum)}%`;
+            rangeInputSum.value = this.value.replace(/\D/g, '')
+        }
+    })
 
     function maskPhone(e) {
         const mask = /\+7 \(\d{3}\) \d{3} \d{2} \d{2}/;
