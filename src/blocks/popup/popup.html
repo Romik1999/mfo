@@ -1,71 +1,70 @@
-<div class="popup" id="popup_order">
-    <div class="popup__close">
-        Закрыть
-    </div>
-    <div class="popup__wrapper">
-        <div class="popup__title">
+<div class="modal modal-main">
+    <div class="modal__wrapper">
+        <div class="modal__close modal-main__close">
+            Закрыть
+        </div>
+        <div class="modal__title">
             Оставьте заявку
         </div>
-        <div class="popup__subtitle">
+        <div class="modal__subtitle">
             Для получения заявок, оставьте номер телефона и ваше имя.
             Наш менеджер расскажет вам все подробнее.
         </div>
-        <div class="popup__form">
-            <form class="calc-form">
-                <div class="calc-form__field">
-                    <input class="calc-form__input" type="text" placeholder="Как вас зовут?">
+        <div class="modal__form">
+            <form class="modal-form">
+                <div class="modal-form__field">
+                    <input class="modal-form__input" type="text" placeholder="Как вас зовут?">
                 </div>
-                <div class="calc-form__field">
-                    <input class="calc-form__input" type="tel" placeholder="Ваш телефон" onkeypress="maskPhone(event)"
+                <div class="modal-form__field">
+                    <input class="modal-form__input" type="tel" placeholder="Ваш телефон" onkeypress="maskPhone(event)"
                            onpaste="onPastePhone(event)">
                 </div>
-                <button class="calc-form__button sbtn sbtn--red" type="submit">Получить деньги</button>
+                <button class="modal-form__button sbtn sbtn--red" type="submit">Получить деньги</button>
             </form>
         </div>
     </div>
 </div>
 
-
-<div class="popup" id="popup_review">
-    <div class="popup__close">
-        Закрыть
-    </div>
-    <div class="popup__wrapper">
-        <div class="popup__title">
+<div class="modal modal-reviews">
+    <div class="modal__wrapper">
+        <div class="modal__close modal-reviews__close">
+            Закрыть
+        </div>
+        <div class="modal__title">
             Оставьте отзыв
         </div>
-        <div class="popup__form">
-            <form class="calc-form">
-                <div class="calc-form__inner">
-                    <div class="calc-form__left">
-                        <input class="calc-form__foto" type="file" placeholder="Ваше фото">
+        <div class="modal__form">
+            <form class="modal-form">
+                <div class="modal-form__inner">
+                    <div class="modal-form__left">
+                        <input class="modal-form__foto" type="file" placeholder="Ваше фото">
                         <p>Добавить фото</p>
                     </div>
-                    <div class="calc-form__right">
-                        <div class="calc-form__field">
-                            <input class="calc-form__input" type="text" placeholder="Как вас зовут?">
+                    <div class="modal-form__right">
+                        <div class="modal-form__field">
+                            <input class="modal-form__input" type="text" placeholder="Как вас зовут?">
                         </div>
-                        <div class="calc-form__field">
-                            <textarea class="calc-form__textarea" name="message"
+                        <div class="modal-form__field">
+                            <textarea class="modal-form__textarea" name="message"
                                       placeholder="Ваш комментарий"></textarea>
                         </div>
                     </div>
                 </div>
-                <button class="calc-form__button sbtn sbtn--red" type="submit">Оставить отзыв</button>
+                <button class="modal-form__button sbtn sbtn--red" type="submit">Оставить отзыв</button>
             </form>
         </div>
     </div>
 </div>
 
-<div class="popup" id="popup_success">
-    <div class="popup__close">
-        Закрыть
-    </div>
-    <div class="popup__wrapper">
-        <div class="popup__title">
+<div class="modal modal-success">
+    <div class="modal__wrapper">
+        <div class="modal__close modal-success__close">
+            Закрыть
+        </div>
+        <div class="modal__title">
             Заявка отправлена
         </div>
-        <div class="popup__subtitle">
+        <div class="modal__subtitle">
             Мы получили вашу заявку.
             Наш менеджер свяжится с вами.
         </div>
